@@ -71,10 +71,9 @@ install() {
     zmicro plugin install jvm
   fi
 
-  if [ "$(os::has_command java)" != "true" ]; then
-    zmicro jvm install $PACKAGE_CORE_VERSION
-    zmicro jvm use $PACKAGE_CORE_VERSION
-  fi
+  zmicro jvm install $PACKAGE_CORE_VERSION
+  
+  zmicro jvm use $PACKAGE_CORE_VERSION
 
   log::info "[$(timestamp)][package][$name] current java version: $(zmicro jvm current)"
 
