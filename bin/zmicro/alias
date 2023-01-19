@@ -5,11 +5,11 @@ help() {
   echo "  zmicro java <args ...>"
   echo ""
 
-  java --help
+  java -help
 }
 
 version() {
-  java --version
+  java -version
 }
 
 core() {
