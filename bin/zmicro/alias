@@ -1,0 +1,41 @@
+#!/bin/bash
+
+help() {
+  echo "Usage:"
+  echo "  zmicro java <args ...>"
+  echo ""
+
+  java --help
+}
+
+version() {
+  java --version
+}
+
+core() {
+  # context directory
+  local context="$ZMICRO_PACKAGES_DATA_PATH/java"
+  if [ ! -d "$context" ]; then
+    mkdir -p $context
+  fi
+  cd $context
+  # context directory
+
+  case $1 in
+  -h | --help | help)
+    help
+    ;;
+  -v | --version | version)
+    version
+    ;;
+  *)
+    java "$@"
+    ;;
+  esac
+}
+
+run() {
+  core "$@"
+}
+
+run "$@"

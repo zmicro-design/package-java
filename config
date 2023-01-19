@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export PACKAGE_CORE_NAME="java"
+export PACKAGE_CORE_BIN_NAME="$PACKAGE_CORE_NAME"
+export PACKAGE_CORE_VERSION=zulu@1.17.0
+export PACKAGE_CORE_RELEASE_DOWNLOAD="https://github.com/zmicro-design/package-java/releases/download"
